@@ -4,9 +4,9 @@ import Image from "next/image"
 
 // 照片資料
 const photos = [
-  { src: '/1.png', label: '學設計', top: 30, left: 350, width: 380},
-  { src: '/2.png', label: '做畫', top: 70, left: 850, width: 450},
-  { src: '/3.png', label: '聽音樂', top: 350, left: 100, width: 260},
+  { src: '/01.png', label: '學設計', top: 30, left: 350, width: 380},
+  { src: '/02.png', label: '做畫', top: 70, left: 850, width: 450},
+  { src: '/03.png', label: '聽音樂', top: 350, left: 100, width: 260},
   { src: '/4.png', label: '享天倫之樂', top: 450, left: 480, width: 400},
   { src: '/7.png', label: '在每次吃蓮藕的時候說吃藕醜', top: 600, left: 1000, width: 270},
   { src: '/5.png', label: '做薑餅屋', top: 900, left: 220, width: 250},
