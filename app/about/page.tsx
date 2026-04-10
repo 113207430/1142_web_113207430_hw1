@@ -7,7 +7,7 @@ function InfoRow({ zh, en }: { zh: string; en: string }) {
  return (
    <div style={{ textAlign: 'center', marginBottom: '0.1px', width: '100%'}}>
      {/* 中文 */}
-     <svg width="100%" height="50" overflow="visible">
+     <svg width="100%" height="45" overflow="visible">
       
        <text
          x="50%"
@@ -31,7 +31,7 @@ function InfoRow({ zh, en }: { zh: string; en: string }) {
 
 
    {/* 英文 */}
-     <svg width="100%" height="25" overflow="visible">
+     <svg width="100%" height="23" overflow="visible">
 
 
        <text
@@ -83,7 +83,7 @@ export default function About() {
        alignItems: 'center',
        justifyContent: 'center',
        height: '100%',
-       paddingTop: '80px',
+       paddingTop: '40px',
        paddingBottom: '40px',
        paddingLeft: '20px',  
        paddingRight: '20px',
