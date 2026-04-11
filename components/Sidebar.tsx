@@ -15,17 +15,17 @@ export default function Sidebar() {
   }, []);
 
   const sidebarContent = (
-    <div className="w-[280px] h-full p-4" style={{ backgroundColor: '#482a1d' }}>
+    <div className="w-[280px] h-full p-4" style={{ backgroundColor: '#482a1d', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '3px' }}>
       <Link href="/home" onClick={() => setMenuOpen(false)}>
         <div className="flex justify-center items-center w-full" id="work-1">
-          <Image src="/cdbb.png" alt="avatar" width={80} height={80} />
+          <Image src="/cdbb.png" alt="avatar" width={100} height={100} />
         </div>
       </Link>
 
       <div className="text-center sidebar-info">陳歆穎</div>
       <div className="text-center sidebar-info">19y | NCCU LE | NCCU DCT</div>
 
-      <div className="flex gap-2 justify-center">
+      <div className="flex gap-2 justify-center" style={{ marginTop: '16px' }}>
         <a href="https://www.instagram.com/cindibabie" target="_blank" rel="noopener noreferrer">
           <div className="w-[60px] h-[60px] flex justify-center items-center">
             <Image src="/INS.png" alt="instagram" width={60} height={60} />
@@ -50,7 +50,7 @@ export default function Sidebar() {
       </div>
 
       <Link href="/about" onClick={() => setMenuOpen(false)}>
-        <div id="btn-about">關於我</div>
+        <div id="btn-about" style={{ marginTop: '40px' }}>關於我</div>
       </Link>
       <Link href="/hobby" onClick={() => setMenuOpen(false)}>
         <div id="btn-hobby">我的興趣</div>

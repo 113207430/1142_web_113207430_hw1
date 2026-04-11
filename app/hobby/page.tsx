@@ -35,9 +35,11 @@ export default function Hobby() {
           backgroundImage: "url('/hobb.png')",
           backgroundSize: 'cover',
           backgroundRepeat: 'repeat-y',
+          backgroundAttachment: 'fixed',
           width: '100%',
           minHeight: `${photos.length * 430}px`,
           position: 'relative',
+          overflowX: 'scroll',
         }}>
           {photos.map((photo, index) => (
             <div
@@ -47,6 +49,17 @@ export default function Hobby() {
                 top: index * 430,
                 left: '50%',
                 transform: 'translateX(-50%)',
+                textAlign: 'center',
+                transition: 'transform 0.3s ease, filter 0.3s ease',
+                cursor: 'pointer',
+              }}
+              onMouseEnter={e => {
+                (e.currentTarget as HTMLDivElement).style.transform = 'translateX(-50%) scale(1.07)'
+                ;(e.currentTarget as HTMLDivElement).style.filter = 'drop-shadow(0 0 18px #e8ce70)'
+              }}
+              onMouseLeave={e => {
+                (e.currentTarget as HTMLDivElement).style.transform = 'translateX(-50%) scale(1)'
+                ;(e.currentTarget as HTMLDivElement).style.filter = 'none'
               }}
             >
               <Image
@@ -54,9 +67,9 @@ export default function Hobby() {
                 alt={photo.label}
                 width={photo.width}
                 height={photo.width * 0.75}
-                style={{ objectFit: 'cover', display: 'block', marginTop: '20px'}}
+                style={{ objectFit: 'cover', display: 'block' }}
               />
-              <svg width={photo.width} height="30" overflow="visible" style={{ marginTop: '20px' }}>
+              <svg width={photo.width} height="30" overflow="visible" style={{ marginTop: '6px' }}>
                 <text
                   x="50%"
                   y="20"
@@ -81,52 +94,62 @@ export default function Hobby() {
   }
 
   return (
-    <div style={{ width: '100%', height: '100vh', overflowY: 'scroll', overflowX: 'scroll'}}>
-      <div style={{
-        backgroundImage: "url('/hobb.png')",
-        backgroundSize: 'cover',
-        backgroundRepeat: 'repeat-y',
-        width: '100%',
-        minHeight: '250%',
-        position: 'relative',
-      }}>
-        {photos.map((photo, index) => (
-          <div
-            key={index}
-            style={{
-              position: 'absolute',
-              top: photo.top,
-              left: photo.left,
-              textAlign: 'center',
-            }}
-          >
-            <Image
-              src={photo.src}
-              alt={photo.label}
-              width={photo.width}
-              height={photo.width * 0.75}
-              style={{ objectFit: 'cover', display: 'block' }}
-            />
-            <svg width={photo.width} height="30" overflow="visible" style={{ marginTop: '6px' }}>
-              <text
-                x="50%"
-                y="20"
-                textAnchor="middle"
-                fontSize="24"
-                fontWeight="508"
-                fill="#e8ce70"
-                stroke="#000"
-                strokeWidth="3"
-                paintOrder="stroke fill"
-                fontFamily="BIZ UDMincho, serif"
-                letterSpacing="2"
-              >
-                {photo.label}
-              </text>
-            </svg>
-          </div>
-        ))}
-      </div>
+    <div style={{
+      backgroundImage: "url('/hobb.png')",
+      backgroundSize: 'cover',
+      backgroundRepeat: 'repeat-y',
+      backgroundAttachment: 'fixed',
+      width: '100%',
+      minHeight: '250%',
+      position: 'relative',
+      overflowX: 'scroll',
+    }}>
+      {photos.map((photo, index) => (
+        <div
+          key={index}
+          style={{
+            position: 'absolute',
+            top: photo.top,
+            left: photo.left,
+            textAlign: 'center',
+            transition: 'transform 0.3s ease, filter 0.3s ease',
+            cursor: 'pointer',
+          }}
+          onMouseEnter={e => {
+            (e.currentTarget as HTMLDivElement).style.transform = 'scale(1.07)'
+            ;(e.currentTarget as HTMLDivElement).style.filter = 'drop-shadow(0 0 18px #ebdfc1)'
+          }}
+          onMouseLeave={e => {
+            (e.currentTarget as HTMLDivElement).style.transform = 'scale(1)'
+            ;(e.currentTarget as HTMLDivElement).style.filter = 'none'
+          }}
+        >
+          <Image
+            src={photo.src}
+            alt={photo.label}
+            width={photo.width}
+            height={photo.width * 0.75}
+            style={{ objectFit: 'cover', display: 'block' }}
+          />
+          <svg width={photo.width} height="30" overflow="visible" style={{ marginTop: '6px' }}>
+            <text
+              x="50%"
+              y="35"
+              textAnchor="middle"
+              fontSize="24"
+              fontWeight="508"
+              fill="#e8ce70"
+              stroke="#000"
+              strokeWidth="3"
+              paintOrder="stroke fill"
+              fontFamily="BIZ UDMincho, serif"
+              letterSpacing="2"
+            >
+              {photo.label}
+            </text>
+          </svg>
+        </div>
+      ))}
     </div>
   )
 }

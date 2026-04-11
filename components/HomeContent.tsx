@@ -4,7 +4,7 @@ export default function HomeContent() {
 
     <div style={{
       backgroundImage: "url('/h0me.png')",
-      backgroundSize: 'cover',
+      backgroundSize: '100% 100%',
       backgroundPosition: 'top center',
       backgroundRepeat: 'no-repeat',
       width: '100%',

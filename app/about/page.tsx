@@ -5,9 +5,17 @@ import Image from "next/image"
 
 function InfoRow({ zh, en }: { zh: string; en: string }) {
  return (
-   <div style={{ textAlign: 'center', marginBottom: '0.1px', width: '100%'}}>
+  <div
+    style={{ textAlign: 'center', marginBottom: '0.1px', width: '100%'}}
+    onMouseEnter={e => {
+      (e.currentTarget as HTMLDivElement).style.filter = 'drop-shadow(0 0 12px #e8ce70)'
+    }}
+    onMouseLeave={e => {
+      (e.currentTarget as HTMLDivElement).style.filter = 'none'
+    }}
+  >
      {/* 中文 */}
-     <svg width="100%" height="47" overflow="visible">
+     <svg width="100%" height="22" overflow="visible">
       
        <text
          x="50%"
@@ -31,12 +39,12 @@ function InfoRow({ zh, en }: { zh: string; en: string }) {
 
 
    {/* 英文 */}
-     <svg width="100%" height="23" overflow="visible">
+     <svg width="100%" height="15" overflow="visible" style={{ marginTop: '20px' }}>
 
 
        <text
          x="50%"
-         y="18"
+         y="26"
          textAnchor="middle"
          fontSize="20"
          fontWeight="800"
@@ -61,7 +69,7 @@ export default function About() {
  return (
    <div style={{
      backgroundImage: "url('/aboutbg.png')",
-     backgroundSize: 'cover',
+     backgroundSize: '100% 100%',
      backgroundPosition: 'top center',
      backgroundRepeat: 'no-repeat',
      width: '100%',
