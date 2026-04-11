@@ -7,7 +7,7 @@ function InfoRow({ zh, en }: { zh: string; en: string }) {
  return (
    <div style={{ textAlign: 'center', marginBottom: '0.1px', width: '100%'}}>
      {/* 中文 */}
-     <svg width="100%" height="45" overflow="visible">
+     <svg width="100%" height="47" overflow="visible">
       
        <text
          x="50%"
