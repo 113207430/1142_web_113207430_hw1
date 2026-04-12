@@ -109,6 +109,21 @@ export default function About() {
        <InfoRow zh="精通英文、日文、泰文、西文    的謝謝" en="am capable of saying thank you in English, Japanese, Thai, and Spanish" />
        <InfoRow zh="在生命結束前想要搭飛機飛去埃及看金字塔" en="want to take a flight to Egypt and see the pyramids before my life comes to an end" />
 
+       <div style={{
+        position: 'absolute',
+        bottom: '16px',
+        color: '#e8ce70',
+        fontFamily: 'BIZ UDMincho, serif',
+        fontSize: '14px',
+        letterSpacing: '2px',
+        WebkitTextStroke: '1px black',
+        paintOrder: 'stroke fill',
+        whiteSpace: 'nowrap',
+      }}>
+        ＊金字塔可以發光＊
+      </div>
+       
+
 
      </div>
 
@@ -119,10 +134,10 @@ export default function About() {
      </div>
 
      {/* 正下方文字 */}
-     <div style={{
+     {/* <div style={{
         position: 'absolute',
         bottom: '30px',
-        left: '20%',
+        left: '280px',
         right: '0',
         textAlign: 'center',
         color: '#e8ce70',
@@ -134,7 +149,7 @@ export default function About() {
         zIndex: 20,
       }}>
         ＊金字塔可以發光＊
-      </div>
+      </div> */}
 
 
    </div>
