@@ -118,6 +118,24 @@ export default function About() {
        <Image src="/lionnn.png" alt="intro" width={400} height={320} style={{ objectFit: 'contain' }} />
      </div>
 
+     {/* 正下方文字 */}
+     <div style={{
+        position: 'absolute',
+        bottom: '30px',
+        left: '20%',
+        right: '0',
+        textAlign: 'center',
+        color: '#e8ce70',
+        fontFamily: 'BIZ UDMincho, serif',
+        fontSize: '14px',
+        letterSpacing: '2px',
+        WebkitTextStroke: '1px black',
+        paintOrder: 'stroke fill',
+        zIndex: 20,
+      }}>
+        ＊金字塔可以發光＊
+      </div>
+
 
    </div>
  );
