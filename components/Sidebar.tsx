@@ -66,14 +66,12 @@ export default function Sidebar() {
 
   return (
     <>
-      {/* 桌機：直接顯示 */}
       {!isMobile && (
         <div className="h-full flex-shrink-0">
           {sidebarContent}
         </div>
       )}
 
-      {/* 手機：選單打開時全螢幕顯示 */}
       {isMobile && menuOpen && (
         <div className="fixed inset-0 z-50 flex">
           <div className="h-full overflow-y-auto">
@@ -83,7 +81,6 @@ export default function Sidebar() {
         </div>
       )}
 
-      {/* 手機：右下角漢堡按鈕 */}
       {isMobile && (
         <button
           onClick={() => setMenuOpen(!menuOpen)}
@@ -92,20 +89,25 @@ export default function Sidebar() {
             bottom: '24px',
             right: '24px',
             zIndex: 100,
-            backgroundColor: '#482a1d',
-            border: '2px solid #c9a84c',
+            backgroundColor: 'rgba(72, 42, 29, 0.5)',
+            border: 'none',
             borderRadius: '50%',
             width: '56px',
             height: '56px',
-            fontSize: '24px',
             cursor: 'pointer',
-            color: '#c9a84c',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
+            padding: '0',
           }}
         >
-          {menuOpen ? '✕' : '☰'}
+          <Image
+            src={menuOpen ? '/close.png' : '/menew.png'}
+            alt="menu"
+            width={36}
+            height={36}
+            style={{ objectFit: 'contain' }}
+          />
         </button>
       )}
     </>
