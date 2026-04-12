@@ -14,15 +14,15 @@ type Project = {
 const projects: Project[] = [
   { src: '/spring.png', title: '金旋招新指定題目作品', tool: '創作工具：Procreate', type: 'zoom' },
   { src: '/space.png', title: '空間設計插畫', tool: '創作工具：Procreate', type: 'zoom', imgWidth: 600},
-  { src: '/arcgis.png', title: '第十一屆StoryMaps校園競賽主視覺', tool: '創作工具：ArcGIS_StoryMaps', type: 'link', url: 'https://arcg.is/18Livr1' },
+  { src: '/mag.png', title: '雜誌排版設計', tool: '創作工具：Procreate', type: 'zoom' },
+  { src: '/cover.png', title: '畢業紀念冊封面投稿', tool: '創作工具：Procreate', type: 'zoom' },
   { src: '/j.png', title: '金旋寒假企劃主視覺', tool: '創作工具：Procreate Adobe Illustrator', type: 'zoom' },
   { src: '/test.png', title: '金旋寒假企劃心理測驗圖', tool: '創作工具：Procreate Adobe Illustrator', type: 'zoom' },
-  { src: '/mag.png', title: '雜誌排版設計', tool: '創作工具：Procreate', type: 'zoom' },
   { src: '/ddr.png', title: '東東蕊超市LOGO', tool: '創作工具：Adobe Illustrator', type: 'zoom' },
   { src: '/high.png', title: '高中園遊會宣傳視覺', tool: '創作工具：Canva', type: 'zoom' },
-  { src: '/cover.png', title: '高中畢業紀念冊封面投稿', tool: '創作工具：Procreate', type: 'zoom' },
-  { src: '/clothes.png', title: '高中班級服裝設計', tool: '創作工具：Procreate', type: 'zoom' },
+  { src: '/clothes.png', title: '高中班服設計', tool: '創作工具：Procreate', type: 'zoom' },
   { src: '/circus.png', title: '動態圖像期末作品', tool: '創作工具：After Effect', type: 'link', url: 'https://youtu.be/erVbI437_V8?si=3KAY4l6BOwWk8yA1' },
+  { src: '/arcgis.png', title: '第十一屆StoryMaps校園競賽主視覺', tool: '創作工具：ArcGIS_StoryMaps', type: 'link', url: 'https://arcg.is/18Livr1' },
 ]
 
 export default function Portfolio() {

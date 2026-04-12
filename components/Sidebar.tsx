@@ -59,7 +59,7 @@ export default function Sidebar() {
         <div id="btn-portfolio">我的作品集</div>
       </Link>
       <Link href="/core" onClick={() => setMenuOpen(false)}>
-        <div id="btn-core">我的核心</div>
+        <div id="btn-core">點開我ㄉ腦</div>
       </Link>
     </div>
   );
